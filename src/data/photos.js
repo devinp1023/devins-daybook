@@ -36,25 +36,43 @@ export async function compressImage(file, maxSize = 1200, quality = 0.7) {
         }
       }
 
+      // Ensure integer dimensions (iOS requires this)
+      width = Math.round(width)
+      height = Math.round(height)
+
       const canvas = document.createElement('canvas')
       canvas.width = width
       canvas.height = height
       const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        // Fallback: return original file as blob
+        resolve(file.slice(0, file.size, 'image/jpeg'))
+        return
+      }
       ctx.drawImage(img, 0, 0, width, height)
 
-      canvas.toBlob(
-        (blob) => {
-          if (blob) resolve(blob)
-          else reject(new Error('Failed to compress image'))
-        },
-        'image/jpeg',
-        quality
-      )
+      try {
+        canvas.toBlob(
+          (blob) => {
+            if (blob) resolve(blob)
+            else {
+              // toBlob returned null — fallback to original file
+              resolve(file.slice(0, file.size, file.type || 'image/jpeg'))
+            }
+          },
+          'image/jpeg',
+          quality
+        )
+      } catch {
+        // toBlob threw — fallback to original file
+        resolve(file.slice(0, file.size, file.type || 'image/jpeg'))
+      }
     }
 
     img.onerror = () => {
       URL.revokeObjectURL(url)
-      reject(new Error('Failed to load image'))
+      // Can't load image — store original file as-is
+      resolve(file.slice(0, file.size, file.type || 'image/jpeg'))
     }
 
     img.src = url
@@ -62,15 +80,41 @@ export async function compressImage(file, maxSize = 1200, quality = 0.7) {
 }
 
 export async function savePhoto(entryId, file) {
-  const blob = await compressImage(file)
+  let blob
+  try {
+    const compressed = await compressImage(file)
+    const arrayBuffer = await compressed.arrayBuffer()
+    blob = new Blob([arrayBuffer], { type: 'image/jpeg' })
+  } catch (compressErr) {
+    // Fallback: read original file as ArrayBuffer
+    const arrayBuffer = await file.arrayBuffer()
+    blob = new Blob([arrayBuffer], { type: 'image/jpeg' })
+  }
+
   const photo = {
     id: uuidv4(),
     entryId,
     blob,
     createdAt: Date.now(),
   }
-  const db = await getDB()
-  await db.put(STORE_NAME, photo)
+
+  try {
+    const db = await getDB()
+    await db.put(STORE_NAME, photo)
+  } catch (dbErr) {
+    // Try storing as Uint8Array instead of Blob (iOS fallback)
+    const arrayBuffer = await blob.arrayBuffer()
+    const photo2 = {
+      id: photo.id,
+      entryId,
+      blob: new Uint8Array(arrayBuffer),
+      blobType: 'image/jpeg',
+      createdAt: Date.now(),
+    }
+    const db = await getDB()
+    await db.put(STORE_NAME, photo2)
+  }
+
   return photo.id
 }
 
@@ -105,5 +149,9 @@ export async function getAllPhotos() {
 }
 
 export function createObjectURL(blob) {
+  // Handle Uint8Array stored as iOS fallback
+  if (blob instanceof Uint8Array) {
+    blob = new Blob([blob], { type: 'image/jpeg' })
+  }
   return URL.createObjectURL(blob)
 }

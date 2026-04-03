@@ -347,6 +347,7 @@ export default function NewEntry() {
       }
     } catch (err) {
       console.error('Save failed:', err)
+      alert('Save failed: ' + (err?.message || 'Unknown error'))
     } finally {
       setSaving(false)
     }
