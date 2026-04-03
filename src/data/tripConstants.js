@@ -24,6 +24,20 @@ export const COUNTRY_NAMES = {
   BE: 'Belgium',
   NL: 'Netherlands',
   DE: 'Germany',
+  US: 'United States',
+  ES: 'Spain',
+  PT: 'Portugal',
+  GB: 'United Kingdom',
+  IE: 'Ireland',
+  CH: 'Switzerland',
+  AT: 'Austria',
+  GR: 'Greece',
+  CZ: 'Czech Republic',
+  PL: 'Poland',
+  HR: 'Croatia',
+  DK: 'Denmark',
+  SE: 'Sweden',
+  NO: 'Norway',
 }
 
 // City dropdown options for the composer

@@ -434,6 +434,7 @@ Each sprint is a self-contained Claude Code session. Start each session by shari
 
 - Full run-through of every user flow end to end
 - Fix any visual inconsistencies across views
+- Unify city landmark SVGs: extract path data into a shared module so `CityIllustration.jsx` (React SVG) and the postcard generator (Canvas 2D) use the same tokenized assets instead of duplicate implementations
 - Verify offline mode works completely (no network, all features functional)
 - Test Web Share API postcard flow on a real iPhone
 - Test "Add to Home Screen" and launch from home screen

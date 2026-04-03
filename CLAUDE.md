@@ -32,7 +32,7 @@ A Progressive Web App travel journal for a 6-week Europe trip (May 27 - July 6, 
 - **Sprint 2** — DONE — Journal feed with city illustrations, entry detail view, lightbox
 - **Sprint 3** — DONE — New entry composer, edit, delete with photo upload
 - **Sprint 4** — DONE — Map View (static SVG Europe map) + Photo Roll
-- **Sprint 5** — TODO — City Summaries + Postcard Generator
+- **Sprint 5** — DONE — City Summaries + Postcard Generator
 - **Sprint 6** — TODO — Test Data + Dev Tools (hidden screen)
 - **Sprint 7** — TODO — Mobile Optimization (touch targets, iOS Safari fixes, safe areas)
 - **Sprint 8** — TODO — Polish + Pre-Trip QA

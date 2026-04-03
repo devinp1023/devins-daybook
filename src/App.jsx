@@ -7,7 +7,7 @@ import EntryDetail from './pages/EntryDetail'
 import NewEntry from './pages/NewEntry'
 import MapView from './pages/MapView'
 import PhotoRoll from './pages/PhotoRoll'
-import CitySummaries from './pages/CitySummaries'
+import CitySummaries, { CityDetail } from './pages/CitySummaries'
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -56,6 +56,7 @@ export default function App() {
               path="/cities"
               element={<CitySummaries onMenuOpen={() => setSidebarOpen(true)} />}
             />
+            <Route path="/cities/:cityName" element={<CityDetail />} />
           </Routes>
         </main>
       </div>

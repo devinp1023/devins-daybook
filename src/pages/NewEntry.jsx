@@ -221,6 +221,7 @@ export default function NewEntry() {
 
   const [city, setCity] = useState('')
   const [customCity, setCustomCity] = useState('')
+  const [customCountry, setCustomCountry] = useState('')
   const [showCustomCity, setShowCustomCity] = useState(false)
   const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'))
   const [title, setTitle] = useState('')
@@ -246,6 +247,7 @@ export default function NewEntry() {
     if (!isKnownCity) {
       setShowCustomCity(true)
       setCustomCity(entry.city)
+      setCustomCountry(entry.country || '')
       setCity('__custom__')
     }
 
@@ -300,7 +302,8 @@ export default function NewEntry() {
 
     try {
       const country = getCountryForCity(resolvedCity) ||
-        CITY_OPTIONS.find((c) => c.label === resolvedCity)?.country || ''
+        CITY_OPTIONS.find((c) => c.label === resolvedCity)?.country ||
+        customCountry || ''
 
       if (isEditing) {
         const existingEntry = getEntry(editId)
@@ -486,13 +489,52 @@ export default function NewEntry() {
             <option value="__custom__">+ Add city</option>
           </select>
           {showCustomCity && (
-            <input
-              type="text"
-              value={customCity}
-              onChange={(e) => setCustomCity(e.target.value)}
-              placeholder="Enter city name..."
-              style={{ ...inputStyle, marginTop: '8px' }}
-            />
+            <>
+              <input
+                type="text"
+                value={customCity}
+                onChange={(e) => setCustomCity(e.target.value)}
+                placeholder="Enter city name..."
+                style={{ ...inputStyle, marginTop: '8px' }}
+              />
+              <select
+                value={customCountry}
+                onChange={(e) => setCustomCountry(e.target.value)}
+                style={{
+                  ...inputStyle,
+                  marginTop: '8px',
+                  appearance: 'none',
+                  color: customCountry ? 'var(--text-primary)' : 'var(--text-meta)',
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23a0c8c0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 14px center',
+                  paddingRight: '36px',
+                }}
+              >
+                <option value="">Select country...</option>
+                <option value="US">United States</option>
+                <optgroup label="Europe">
+                  <option value="IT">Italy</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="BE">Belgium</option>
+                  <option value="ES">Spain</option>
+                  <option value="PT">Portugal</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="IE">Ireland</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="AT">Austria</option>
+                  <option value="GR">Greece</option>
+                  <option value="CZ">Czech Republic</option>
+                  <option value="PL">Poland</option>
+                  <option value="HR">Croatia</option>
+                  <option value="DK">Denmark</option>
+                  <option value="SE">Sweden</option>
+                  <option value="NO">Norway</option>
+                </optgroup>
+              </select>
+            </>
           )}
         </div>
 
