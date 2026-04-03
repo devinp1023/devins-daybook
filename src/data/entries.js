@@ -20,6 +20,13 @@ export function initializeEntries() {
   const existing = readEntries()
   if (!existing) {
     writeEntries(seedEntries)
+  } else {
+    // Add any missing seed entries (e.g. newly added seeds)
+    const existingIds = new Set(existing.map((e) => e.id))
+    const missing = seedEntries.filter((s) => !existingIds.has(s.id))
+    if (missing.length > 0) {
+      writeEntries([...existing, ...missing])
+    }
   }
 }
 

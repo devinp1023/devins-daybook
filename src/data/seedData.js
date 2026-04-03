@@ -56,4 +56,27 @@ export const seedEntries = [
     },
     createdAt: 1750550400000,
   },
+  {
+    id: 'seed-4',
+    city: 'Chicago',
+    country: 'US',
+    date: '2025-05-20',
+    title: 'Deep dish and deeper conversations',
+    sections: {
+      activities: {
+        text: 'Walked the Riverwalk at golden hour. The architecture tour by boat was worth every minute — the guide knew every story behind every building.',
+        photoIds: [],
+      },
+      food: {
+        text: 'Lou Malnati\'s did not disappoint. Buttercrust, sausage, the works. Ate too much and regretted nothing.',
+        photoIds: [],
+      },
+      people: { text: '', photoIds: [] },
+      other: {
+        text: 'Chicago feels like a city that doesn\'t need to prove anything to anyone. It just is what it is, and that\'s enough.',
+        photoIds: [],
+      },
+    },
+    createdAt: 1747785600000,
+  },
 ]
