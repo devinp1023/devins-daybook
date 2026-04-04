@@ -60,7 +60,12 @@ body {
   font-family: var(--font-mono);
 }
 
-/* iOS safe areas */
+/* iOS safe areas — exposed as CSS vars for use in inline styles */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
 .safe-top {
   padding-top: env(safe-area-inset-top);
 }

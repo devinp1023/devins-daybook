@@ -93,7 +93,7 @@ export default function Feed({ onMenuOpen }) {
           display: 'flex',
           alignItems: 'center',
           gap: '12px',
-          padding: 'calc(14px + env(safe-area-inset-top, 0px)) 16px 14px',
+          padding: 'calc(14px + var(--sat, 0px)) 16px 14px',
           background: 'var(--bg-card)',
           borderBottom: '1px solid var(--border-card)',
         }}

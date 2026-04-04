@@ -35,7 +35,7 @@ export default function App() {
           overflow: 'hidden',
           background: 'var(--bg-page)',
           boxShadow: '0 0 40px rgba(0,0,0,0.08)',
-          paddingBottom: 'env(safe-area-inset-bottom)',
+          paddingBottom: 'var(--sab, 0px)',
         }}
       >
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
