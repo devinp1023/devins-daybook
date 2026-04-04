@@ -971,6 +971,216 @@ function drawCityLandmark(ctx, city, cw, ch) {
       ctx.stroke()
       break
     }
+    case 'Eze': {
+      // Medieval hilltop village on a cliff
+      const hillW = 300, hillH = 250
+      // Hill/cliff shape
+      ctx.beginPath()
+      ctx.moveTo(cx - hillW / 2, cy + hillH / 3)
+      ctx.quadraticCurveTo(cx - hillW / 4, cy - hillH / 3, cx, cy - hillH / 2)
+      ctx.quadraticCurveTo(cx + hillW / 4, cy - hillH / 3, cx + hillW / 2, cy + hillH / 3)
+      ctx.stroke()
+      // Stone tower at top
+      ctx.strokeRect(cx - 20, cy - hillH / 2 - 60, 40, 60)
+      ctx.beginPath()
+      ctx.moveTo(cx - 22, cy - hillH / 2 - 60)
+      ctx.lineTo(cx, cy - hillH / 2 - 90)
+      ctx.lineTo(cx + 22, cy - hillH / 2 - 60)
+      ctx.stroke()
+      // Tiny clustered buildings
+      ctx.strokeRect(cx - 50, cy - hillH / 3, 28, 35)
+      ctx.strokeRect(cx - 15, cy - hillH / 3 - 10, 24, 40)
+      ctx.strokeRect(cx + 20, cy - hillH / 3 + 5, 30, 30)
+      // Winding path down
+      ctx.beginPath()
+      ctx.moveTo(cx, cy - hillH / 3 + 35)
+      ctx.quadraticCurveTo(cx - 30, cy, cx - 10, cy + 30)
+      ctx.quadraticCurveTo(cx + 20, cy + 60, cx, cy + hillH / 3)
+      ctx.stroke()
+      break
+    }
+    case 'Monaco': {
+      // Casino building with dome + race track
+      const bw = 200, bh = 140
+      // Building
+      ctx.strokeRect(cx - bw / 2, cy - bh / 4, bw, bh / 2)
+      // Dome
+      ctx.beginPath()
+      ctx.arc(cx, cy - bh / 4, bw / 4, Math.PI, 0)
+      ctx.stroke()
+      // Columns
+      for (let i = 0; i < 5; i++) {
+        const colX = cx - bw / 2 + 25 + i * 38
+        ctx.beginPath()
+        ctx.moveTo(colX, cy - bh / 4 + 10)
+        ctx.lineTo(colX, cy + bh / 4 - 10)
+        ctx.stroke()
+      }
+      // Grand entrance arch
+      ctx.beginPath()
+      ctx.arc(cx, cy + bh / 4, 25, Math.PI, 0)
+      ctx.stroke()
+      // Race track curves (dashed)
+      ctx.setLineDash([12, 6])
+      ctx.beginPath()
+      ctx.moveTo(cx - 250, cy + bh / 2 + 40)
+      ctx.quadraticCurveTo(cx - 100, cy + bh / 2, cx, cy + bh / 2 + 30)
+      ctx.quadraticCurveTo(cx + 100, cy + bh / 2 + 60, cx + 250, cy + bh / 2 + 20)
+      ctx.stroke()
+      ctx.setLineDash([])
+      break
+    }
+    case 'Geneva': {
+      // Jet d'Eau fountain
+      // Water base
+      ctx.beginPath()
+      ctx.ellipse(cx, cy + 60, 80, 20, 0, 0, Math.PI * 2)
+      ctx.stroke()
+      // Main jet
+      ctx.lineWidth = 5
+      ctx.beginPath()
+      ctx.moveTo(cx, cy + 50)
+      ctx.lineTo(cx, cy - 180)
+      ctx.stroke()
+      ctx.lineWidth = 3
+      // Spray at top
+      ctx.beginPath()
+      ctx.moveTo(cx, cy - 180)
+      ctx.quadraticCurveTo(cx - 15, cy - 200, cx - 25, cy - 170)
+      ctx.moveTo(cx, cy - 180)
+      ctx.quadraticCurveTo(cx + 15, cy - 200, cx + 25, cy - 170)
+      ctx.stroke()
+      // Falling water curves
+      ctx.beginPath()
+      ctx.moveTo(cx - 3, cy - 100)
+      ctx.quadraticCurveTo(cx - 30, cy - 50, cx - 50, cy + 40)
+      ctx.moveTo(cx + 3, cy - 100)
+      ctx.quadraticCurveTo(cx + 30, cy - 50, cx + 50, cy + 40)
+      ctx.stroke()
+      // Lake waves
+      for (let w = 0; w < 2; w++) {
+        ctx.beginPath()
+        const wy = cy + 85 + w * 20
+        ctx.moveTo(cx - 200, wy)
+        for (let x = cx - 200; x < cx + 200; x += 40) {
+          ctx.quadraticCurveTo(x + 10, wy - 8, x + 20, wy)
+          ctx.quadraticCurveTo(x + 30, wy + 8, x + 40, wy)
+        }
+        ctx.stroke()
+      }
+      break
+    }
+    case 'Antwerp': {
+      // Cathedral spire + diamond
+      // Tall Gothic spire
+      ctx.strokeRect(cx - 30, cy - 60, 60, 180)
+      ctx.beginPath()
+      ctx.moveTo(cx - 35, cy - 60)
+      ctx.lineTo(cx, cy - 200)
+      ctx.lineTo(cx + 35, cy - 60)
+      ctx.stroke()
+      // Gothic windows
+      for (let i = 0; i < 3; i++) {
+        ctx.beginPath()
+        ctx.arc(cx, cy - 30 + i * 50, 12, Math.PI, 0)
+        ctx.stroke()
+      }
+      // Cross on top
+      ctx.beginPath()
+      ctx.moveTo(cx, cy - 200)
+      ctx.lineTo(cx, cy - 220)
+      ctx.moveTo(cx - 10, cy - 210)
+      ctx.lineTo(cx + 10, cy - 210)
+      ctx.stroke()
+      // Diamond shape to the right
+      const dx = cx + 140, dy = cy - 20, dr = 50
+      ctx.beginPath()
+      ctx.moveTo(dx, dy - dr)
+      ctx.lineTo(dx + dr * 0.8, dy)
+      ctx.lineTo(dx, dy + dr * 0.6)
+      ctx.lineTo(dx - dr * 0.8, dy)
+      ctx.closePath()
+      ctx.stroke()
+      // Diamond facets
+      ctx.beginPath()
+      ctx.moveTo(dx - dr * 0.5, dy - dr * 0.3)
+      ctx.lineTo(dx + dr * 0.5, dy - dr * 0.3)
+      ctx.moveTo(dx - dr * 0.5, dy - dr * 0.3)
+      ctx.lineTo(dx, dy + dr * 0.6)
+      ctx.moveTo(dx + dr * 0.5, dy - dr * 0.3)
+      ctx.lineTo(dx, dy + dr * 0.6)
+      ctx.stroke()
+      break
+    }
+    case 'Rotterdam': {
+      // Erasmus Bridge (cable-stayed)
+      const bridgeY = cy + 60
+      // Bridge deck
+      ctx.lineWidth = 4
+      ctx.beginPath()
+      ctx.moveTo(cx - 250, bridgeY)
+      ctx.lineTo(cx + 250, bridgeY)
+      ctx.stroke()
+      ctx.lineWidth = 3
+      // Pylon (asymmetric)
+      ctx.beginPath()
+      ctx.moveTo(cx - 30, bridgeY)
+      ctx.lineTo(cx, cy - 150)
+      ctx.lineTo(cx + 20, bridgeY)
+      ctx.stroke()
+      // Cables from pylon
+      for (let i = 1; i <= 5; i++) {
+        ctx.beginPath()
+        ctx.moveTo(cx, cy - 150 + i * 10)
+        ctx.lineTo(cx - 50 - i * 35, bridgeY)
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.moveTo(cx, cy - 150 + i * 10)
+        ctx.lineTo(cx + 40 + i * 35, bridgeY)
+        ctx.stroke()
+      }
+      // Cube houses on the right
+      ctx.save()
+      ctx.translate(cx + 180, cy - 10)
+      ctx.rotate(Math.PI / 4)
+      ctx.strokeRect(-18, -18, 36, 36)
+      ctx.restore()
+      ctx.save()
+      ctx.translate(cx + 220, cy - 5)
+      ctx.rotate(Math.PI / 4)
+      ctx.strokeRect(-15, -15, 30, 30)
+      ctx.restore()
+      break
+    }
+    case 'Hamburg': {
+      // Elbphilharmonie
+      const bw2 = 240, bh2 = 120
+      // Base warehouse block
+      ctx.strokeRect(cx - bw2 / 2, cy, bw2, bh2 / 2)
+      // Glass building on top
+      ctx.strokeRect(cx - bw2 / 2, cy - bh2 / 2, bw2, bh2 / 2)
+      // Wave roof
+      ctx.beginPath()
+      ctx.moveTo(cx - bw2 / 2, cy - bh2 / 2)
+      ctx.quadraticCurveTo(cx - bw2 / 4, cy - bh2, cx, cy - bh2 * 0.7)
+      ctx.quadraticCurveTo(cx + bw2 / 4, cy - bh2 * 0.5, cx + bw2 / 2, cy - bh2 * 0.85)
+      ctx.stroke()
+      // Window grid
+      for (let gy = cy - bh2 / 2 + 15; gy < cy; gy += 18) {
+        ctx.beginPath()
+        ctx.moveTo(cx - bw2 / 2 + 10, gy)
+        ctx.lineTo(cx + bw2 / 2 - 10, gy)
+        ctx.stroke()
+      }
+      // Warehouse arches
+      for (let i = 0; i < 5; i++) {
+        const ax = cx - bw2 / 2 + 30 + i * 46
+        ctx.beginPath()
+        ctx.arc(ax, cy + bh2 / 2, 16, Math.PI, 0)
+        ctx.stroke()
+      }
+      break
+    }
     case 'Chicago': {
       // Chicago skyline — Willis/Sears Tower + buildings + Bean
       // Willis Tower (tall center)

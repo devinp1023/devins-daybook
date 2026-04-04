@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 import { seedEntries } from './seedData'
+import { generateTestData } from './testData'
 
 const STORAGE_KEY = 'journal_entries'
 
@@ -77,6 +78,25 @@ export function deleteEntry(id) {
   const entries = getAllEntries()
   const filtered = entries.filter((e) => e.id !== id)
   writeEntries(filtered)
+}
+
+export function loadTestData() {
+  const existing = readEntries() || []
+  const existingIds = new Set(existing.map((e) => e.id))
+  const testEntries = generateTestData().filter((e) => !existingIds.has(e.id))
+  writeEntries([...existing, ...testEntries])
+  return testEntries.length
+}
+
+export function clearTestData() {
+  const entries = readEntries() || []
+  const kept = entries.filter((e) => !e.id.startsWith('test-'))
+  writeEntries(kept)
+  return entries.length - kept.length
+}
+
+export function clearAllData() {
+  localStorage.removeItem(STORAGE_KEY)
 }
 
 export function getCitiesWithEntries() {

@@ -191,9 +191,126 @@ const illustrations = {
       <ellipse cx="330" cy="128" rx="20" ry="5" stroke="rgba(77,196,168,0.15)" strokeWidth="1" fill="none" />
     </svg>
   ),
+
+  Eze: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Medieval hilltop village */}
+      <path d="M140 130 Q170 80 200 75 Q230 80 260 130" stroke="rgba(77,196,168,0.15)" strokeWidth="1.5" fill="rgba(77,196,168,0.05)" />
+      {/* Stone tower */}
+      <rect x="188" y="45" width="24" height="30" fill="rgba(77,196,168,0.18)" />
+      <path d="M186 45 L200 30 L214 45" fill="rgba(77,196,168,0.22)" />
+      {/* Tiny buildings clustered */}
+      <rect x="165" y="72" width="16" height="22" fill="rgba(77,196,168,0.14)" />
+      <rect x="184" y="68" width="14" height="18" fill="rgba(77,196,168,0.12)" />
+      <rect x="218" y="70" width="18" height="24" fill="rgba(77,196,168,0.15)" />
+      {/* Winding path */}
+      <path d="M200 100 Q180 110 190 120 Q210 130 200 140" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="none" />
+      {/* Mediterranean sea */}
+      <path d="M40 150 Q120 144 200 148 Q280 152 360 146" stroke="rgba(77,196,168,0.12)" strokeWidth="1" fill="none" />
+    </svg>
+  ),
+
+  Monaco: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Casino building */}
+      <rect x="155" y="65" width="90" height="65" fill="rgba(77,196,168,0.12)" />
+      <path d="M150 65 L200 35 L250 65" fill="rgba(77,196,168,0.15)" />
+      {/* Casino dome */}
+      <path d="M185 65 Q200 50 215 65" stroke="rgba(77,196,168,0.25)" strokeWidth="1.5" fill="rgba(77,196,168,0.08)" />
+      {/* Columns */}
+      <rect x="170" y="75" width="5" height="40" fill="rgba(77,196,168,0.18)" />
+      <rect x="185" y="75" width="5" height="40" fill="rgba(77,196,168,0.18)" />
+      <rect x="210" y="75" width="5" height="40" fill="rgba(77,196,168,0.18)" />
+      <rect x="225" y="75" width="5" height="40" fill="rgba(77,196,168,0.18)" />
+      {/* Race track curve */}
+      <path d="M80 140 Q130 120 180 135 Q230 145 300 130 Q340 125 370 135" stroke="rgba(77,196,168,0.2)" strokeWidth="2" strokeDasharray="8 4" fill="none" />
+      {/* Yacht in harbor */}
+      <path d="M310 100 L330 100 L340 110 L300 110 Z" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="rgba(77,196,168,0.06)" />
+      <line x1="320" y1="100" x2="320" y2="85" stroke="rgba(77,196,168,0.2)" strokeWidth="1" />
+    </svg>
+  ),
+
+  Geneva: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Jet d'Eau fountain */}
+      <path d="M200 130 Q198 80 200 20" stroke="rgba(77,196,168,0.3)" strokeWidth="2.5" fill="none" />
+      <path d="M200 20 Q195 15 192 25" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="none" />
+      <path d="M200 20 Q205 15 208 25" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="none" />
+      {/* Spray mist */}
+      <circle cx="195" cy="35" r="2" fill="rgba(77,196,168,0.15)" />
+      <circle cx="206" cy="30" r="1.5" fill="rgba(77,196,168,0.12)" />
+      <circle cx="193" cy="45" r="1.5" fill="rgba(77,196,168,0.1)" />
+      {/* Lake */}
+      <path d="M40 135 Q120 128 200 132 Q280 136 360 130" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="none" />
+      <path d="M40 145 Q120 138 200 142 Q280 146 360 140" stroke="rgba(77,196,168,0.12)" strokeWidth="1" fill="none" />
+      {/* Alps in background */}
+      <path d="M60 120 Q100 90 140 115 Q180 85 220 110 Q260 80 300 108 Q330 90 360 120" stroke="rgba(77,196,168,0.1)" strokeWidth="1.5" fill="none" />
+    </svg>
+  ),
+
+  Antwerp: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Cathedral spire */}
+      <rect x="188" y="50" width="24" height="80" fill="rgba(77,196,168,0.15)" />
+      <path d="M185 50 L200 10 L215 50" fill="rgba(77,196,168,0.2)" />
+      <line x1="200" y1="10" x2="200" y2="2" stroke="rgba(77,196,168,0.3)" strokeWidth="1.5" />
+      {/* Gothic windows */}
+      <path d="M193 65 Q200 58 207 65" stroke="rgba(77,196,168,0.25)" strokeWidth="1" fill="none" />
+      <path d="M193 85 Q200 78 207 85" stroke="rgba(77,196,168,0.25)" strokeWidth="1" fill="none" />
+      {/* Diamond shape */}
+      <path d="M310 70 L325 55 L340 70 L325 85 Z" stroke="rgba(77,196,168,0.25)" strokeWidth="1.5" fill="rgba(77,196,168,0.08)" />
+      <path d="M316 70 L325 61 L334 70" stroke="rgba(77,196,168,0.15)" strokeWidth="1" fill="none" />
+      {/* Guild houses */}
+      <rect x="120" y="80" width="28" height="50" fill="rgba(77,196,168,0.1)" />
+      <path d="M118 80 L134 65 L150 80" fill="rgba(77,196,168,0.12)" />
+      <rect x="250" y="85" width="25" height="45" fill="rgba(77,196,168,0.1)" />
+      <path d="M248 85 L262 72 L277 85" fill="rgba(77,196,168,0.12)" />
+    </svg>
+  ),
+
+  Rotterdam: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Erasmus Bridge cable-stayed */}
+      <path d="M100 130 L200 50 L300 130" stroke="rgba(77,196,168,0.25)" strokeWidth="2" fill="none" />
+      {/* Bridge deck */}
+      <line x1="60" y1="130" x2="340" y2="130" stroke="rgba(77,196,168,0.2)" strokeWidth="2" />
+      {/* Cables */}
+      <line x1="200" y1="50" x2="130" y2="130" stroke="rgba(77,196,168,0.12)" strokeWidth="1" />
+      <line x1="200" y1="50" x2="160" y2="130" stroke="rgba(77,196,168,0.12)" strokeWidth="1" />
+      <line x1="200" y1="50" x2="240" y2="130" stroke="rgba(77,196,168,0.12)" strokeWidth="1" />
+      <line x1="200" y1="50" x2="270" y2="130" stroke="rgba(77,196,168,0.12)" strokeWidth="1" />
+      {/* Cube houses */}
+      <rect x="310" y="80" width="20" height="20" fill="rgba(77,196,168,0.15)" transform="rotate(45 320 90)" />
+      <rect x="340" y="80" width="20" height="20" fill="rgba(77,196,168,0.12)" transform="rotate(45 350 90)" />
+      {/* Water */}
+      <path d="M40 145 Q120 138 200 142 Q280 146 360 140" stroke="rgba(77,196,168,0.12)" strokeWidth="1" fill="none" />
+    </svg>
+  ),
+
+  Hamburg: ({ className }) => (
+    <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Elbphilharmonie */}
+      <rect x="155" y="70" width="90" height="60" fill="rgba(77,196,168,0.12)" />
+      {/* Wave roof */}
+      <path d="M150 70 Q170 45 190 55 Q210 40 230 50 Q250 42 255 70" stroke="rgba(77,196,168,0.25)" strokeWidth="2" fill="rgba(77,196,168,0.08)" />
+      {/* Windows grid */}
+      <line x1="175" y1="80" x2="175" y2="125" stroke="rgba(77,196,168,0.1)" strokeWidth="0.5" />
+      <line x1="200" y1="80" x2="200" y2="125" stroke="rgba(77,196,168,0.1)" strokeWidth="0.5" />
+      <line x1="225" y1="80" x2="225" y2="125" stroke="rgba(77,196,168,0.1)" strokeWidth="0.5" />
+      {/* Warehouse to the left */}
+      <rect x="90" y="90" width="40" height="40" fill="rgba(77,196,168,0.1)" />
+      <path d="M88 90 L110 75 L132 90" fill="rgba(77,196,168,0.12)" />
+      {/* Ship/harbor */}
+      <path d="M280 120 Q300 110 330 115 Q345 118 350 125 L275 125 Z" stroke="rgba(77,196,168,0.18)" strokeWidth="1.5" fill="rgba(77,196,168,0.05)" />
+      <line x1="310" y1="115" x2="310" y2="100" stroke="rgba(77,196,168,0.15)" strokeWidth="1" />
+      {/* Water */}
+      <path d="M40 145 Q120 138 200 142 Q280 146 360 140" stroke="rgba(77,196,168,0.12)" strokeWidth="1" fill="none" />
+    </svg>
+  ),
+
 }
 
-// Fallback for day trips or custom cities
+// Fallback for custom cities
 const FallbackIllustration = ({ className }) => (
   <svg viewBox="0 0 400 160" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="200" cy="70" r="25" stroke="rgba(77,196,168,0.2)" strokeWidth="1.5" fill="rgba(77,196,168,0.05)" />

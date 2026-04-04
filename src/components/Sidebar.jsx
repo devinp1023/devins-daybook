@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { to: '/map', label: 'Map View', icon: '\u{1F5FA}\uFE0F' },
   { to: '/photos', label: 'Photo Roll', icon: '\u{1F4F7}' },
   { to: '/cities', label: 'City Summaries', icon: '\u{1F3D9}\uFE0F' },
+  { to: '/dev', label: 'Dev Tools', icon: '\u2699\uFE0F' },
 ]
 
 export default function Sidebar({ isOpen, onClose }) {

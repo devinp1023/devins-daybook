@@ -148,6 +148,11 @@ export async function getAllPhotos() {
   return db.getAll(STORE_NAME)
 }
 
+export async function clearAllPhotos() {
+  const db = await getDB()
+  await db.clear(STORE_NAME)
+}
+
 export function createObjectURL(blob) {
   // Handle Uint8Array stored as iOS fallback
   if (blob instanceof Uint8Array) {
