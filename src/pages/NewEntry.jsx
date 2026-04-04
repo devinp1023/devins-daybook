@@ -397,7 +397,7 @@ export default function NewEntry() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '14px 16px',
+          padding: 'calc(14px + env(safe-area-inset-top, 0px)) 16px 14px',
           background: 'var(--bg-card)',
           borderBottom: '1px solid var(--border-card)',
           position: 'sticky',

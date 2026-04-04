@@ -35,7 +35,6 @@ export default function App() {
           overflow: 'hidden',
           background: 'var(--bg-page)',
           boxShadow: '0 0 40px rgba(0,0,0,0.08)',
-          paddingTop: 'env(safe-area-inset-top)',
           paddingBottom: 'env(safe-area-inset-bottom)',
         }}
       >

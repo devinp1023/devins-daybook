@@ -129,7 +129,7 @@ export default function EntryDetail() {
           onClick={() => navigate(-1)}
           style={{
             position: 'absolute',
-            top: '14px',
+            top: 'calc(14px + env(safe-area-inset-top, 0px))',
             left: '14px',
             width: '44px',
             height: '44px',
@@ -155,7 +155,7 @@ export default function EntryDetail() {
           to={`/edit/${entry.id}`}
           style={{
             position: 'absolute',
-            top: '14px',
+            top: 'calc(14px + env(safe-area-inset-top, 0px))',
             right: '14px',
             width: '44px',
             height: '44px',

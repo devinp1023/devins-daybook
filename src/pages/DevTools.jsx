@@ -7,7 +7,7 @@ const headerStyle = {
   top: 0,
   zIndex: 20,
   background: 'var(--bg-header)',
-  padding: '18px 20px',
+  padding: 'calc(18px + env(safe-area-inset-top, 0px)) 20px 18px',
   display: 'flex',
   alignItems: 'center',
   gap: '14px',
