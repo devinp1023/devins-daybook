@@ -24,14 +24,19 @@ export default function App() {
   ) || location.pathname.startsWith('/entry/')
 
   return (
-    <div className="min-h-screen flex justify-center" style={{ background: '#e8f0ee' }}>
+    <div style={{ minHeight: '100dvh', display: 'flex', justifyContent: 'center', background: '#e8f0ee' }}>
       {/* Mobile shell */}
       <div
-        className="relative w-full min-h-screen overflow-hidden"
         style={{
+          position: 'relative',
+          width: '100%',
           maxWidth: '430px',
+          minHeight: '100dvh',
+          overflow: 'hidden',
           background: 'var(--bg-page)',
           boxShadow: '0 0 40px rgba(0,0,0,0.08)',
+          paddingTop: 'env(safe-area-inset-top)',
+          paddingBottom: 'env(safe-area-inset-bottom)',
         }}
       >
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

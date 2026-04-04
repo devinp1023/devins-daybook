@@ -14,6 +14,12 @@ const SECTIONS = [
   { key: 'other', label: 'Other Notes', icon: '\u{1F4DD}' },
 ]
 
+function scrollIntoViewOnFocus(e) {
+  setTimeout(() => {
+    e.target.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }, 300)
+}
+
 function AutoGrowTextarea({ value, onChange, placeholder }) {
   const ref = useRef(null)
 
@@ -29,6 +35,7 @@ function AutoGrowTextarea({ value, onChange, placeholder }) {
       ref={ref}
       value={value}
       onChange={onChange}
+      onFocus={scrollIntoViewOnFocus}
       placeholder={placeholder}
       rows={3}
       style={{
@@ -71,16 +78,16 @@ function PhotoUploadGrid({ photos, onAdd, onRemove, maxPhotos = 3 }) {
             onClick={() => onRemove(i)}
             style={{
               position: 'absolute',
-              top: '3px',
-              right: '3px',
-              width: '20px',
-              height: '20px',
+              top: '0px',
+              right: '0px',
+              width: '28px',
+              height: '28px',
               borderRadius: '50%',
               background: 'rgba(0,0,0,0.6)',
               color: '#fff',
               border: 'none',
               cursor: 'pointer',
-              fontSize: '12px',
+              fontSize: '14px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -559,6 +566,7 @@ export default function NewEntry() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
+            onFocus={scrollIntoViewOnFocus}
             style={{ ...inputStyle, fontFamily: 'var(--font-mono)', fontSize: '14px' }}
           />
         </div>
@@ -583,6 +591,7 @@ export default function NewEntry() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            onFocus={scrollIntoViewOnFocus}
             placeholder="Give this day a title..."
             style={{
               ...inputStyle,

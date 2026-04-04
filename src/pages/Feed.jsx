@@ -103,8 +103,8 @@ export default function Feed({ onMenuOpen }) {
           onClick={onMenuOpen}
           aria-label="Open menu"
           style={{
-            width: '40px',
-            height: '40px',
+            width: '44px',
+            height: '44px',
             borderRadius: '10px',
             border: '1px solid var(--border-card)',
             background: 'var(--bg-card)',
@@ -191,7 +191,7 @@ export default function Feed({ onMenuOpen }) {
                 key={label}
                 onClick={() => setCityFilter(label === 'All' ? null : label)}
                 style={{
-                  padding: '6px 14px',
+                  padding: '10px 16px',
                   borderRadius: '20px',
                   fontSize: '12px',
                   fontFamily: 'var(--font-mono)',

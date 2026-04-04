@@ -88,8 +88,8 @@ export default function PhotoRoll({ onMenuOpen }) {
           onClick={onMenuOpen}
           aria-label="Open menu"
           style={{
-            width: '40px',
-            height: '40px',
+            width: '44px',
+            height: '44px',
             borderRadius: '10px',
             border: '1px solid var(--border-card)',
             background: 'var(--bg-card)',

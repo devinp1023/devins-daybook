@@ -96,8 +96,8 @@ export default function MapView({ onMenuOpen }) {
           onClick={onMenuOpen}
           aria-label="Open menu"
           style={{
-            width: '40px',
-            height: '40px',
+            width: '44px',
+            height: '44px',
             borderRadius: '10px',
             border: '1px solid var(--border-card)',
             background: 'var(--bg-card)',
@@ -197,6 +197,8 @@ export default function MapView({ onMenuOpen }) {
                   onClick={(e) => { e.stopPropagation(); handleDotClick(name) }}
                   style={{ cursor: 'pointer' }}
                 >
+                  {/* Invisible hit area for touch */}
+                  <circle cx={pos.x} cy={pos.y} r={16} fill="transparent" />
                   <circle
                     cx={pos.x}
                     cy={pos.y}
@@ -224,6 +226,9 @@ export default function MapView({ onMenuOpen }) {
                   onClick={(e) => { e.stopPropagation(); handleDotClick(city.name) }}
                   style={{ cursor: 'pointer' }}
                 >
+                  {/* Invisible hit area for touch */}
+                  <circle cx={pos.x} cy={pos.y} r={18} fill="transparent" />
+
                   {/* Pulse for cities with entries */}
                   {count > 0 && (
                     <circle cx={pos.x} cy={pos.y} r={r} fill="#4dc4a8" opacity="0.2">
@@ -329,13 +334,13 @@ function CityPopover({ cityName, entries, entryCounts, onClose, onNavigate }) {
           position: 'absolute',
           top: '10px',
           right: '12px',
-          width: '28px',
-          height: '28px',
-          borderRadius: '8px',
+          width: '36px',
+          height: '36px',
+          borderRadius: '10px',
           border: '1px solid var(--border-card)',
           background: 'var(--bg-page)',
           color: 'var(--text-secondary)',
-          fontSize: '14px',
+          fontSize: '16px',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',

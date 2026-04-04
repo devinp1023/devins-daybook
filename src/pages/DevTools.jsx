@@ -77,6 +77,7 @@ export default function DevTools({ onMenuOpen }) {
       <div style={headerStyle}>
         <button
           onClick={onMenuOpen}
+          aria-label="Open menu"
           style={{
             background: 'none',
             border: 'none',
@@ -84,6 +85,8 @@ export default function DevTools({ onMenuOpen }) {
             fontSize: '22px',
             cursor: 'pointer',
             padding: '4px',
+            minWidth: '44px',
+            minHeight: '44px',
           }}
         >
           &#9776;
