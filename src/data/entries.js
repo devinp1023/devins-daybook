@@ -3,6 +3,7 @@ import { seedEntries } from './seedData'
 import { generateTestData } from './testData'
 
 const STORAGE_KEY = 'journal_entries'
+const SEEDED_KEY = 'journal_seeded'
 
 function readEntries() {
   try {
@@ -18,17 +19,12 @@ function writeEntries(entries) {
 }
 
 export function initializeEntries() {
+  if (localStorage.getItem(SEEDED_KEY)) return
   const existing = readEntries()
   if (!existing) {
     writeEntries(seedEntries)
-  } else {
-    // Add any missing seed entries (e.g. newly added seeds)
-    const existingIds = new Set(existing.map((e) => e.id))
-    const missing = seedEntries.filter((s) => !existingIds.has(s.id))
-    if (missing.length > 0) {
-      writeEntries([...existing, ...missing])
-    }
   }
+  localStorage.setItem(SEEDED_KEY, '1')
 }
 
 export function getAllEntries() {
@@ -90,13 +86,16 @@ export function loadTestData() {
 
 export function clearTestData() {
   const entries = readEntries() || []
-  const kept = entries.filter((e) => !e.id.startsWith('test-'))
+  const kept = entries.filter(
+    (e) => !e.id.startsWith('test-') && !e.id.startsWith('seed-'),
+  )
   writeEntries(kept)
   return entries.length - kept.length
 }
 
 export function clearAllData() {
   localStorage.removeItem(STORAGE_KEY)
+  localStorage.setItem(SEEDED_KEY, '1')
 }
 
 export function getCitiesWithEntries() {
