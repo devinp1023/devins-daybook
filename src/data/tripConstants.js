@@ -1,19 +1,19 @@
-export const TRIP_START = '2025-05-27'
-export const TRIP_END = '2025-07-06'
+export const TRIP_START = '2026-05-27'
+export const TRIP_END = '2026-07-06'
 export const TRIP_DAYS = 41
 
 export const CITIES = [
-  { name: 'Venice', country: 'IT', arrival: '2025-05-27', departure: '2025-05-29', dayTrips: [] },
-  { name: 'Florence', country: 'IT', arrival: '2025-05-29', departure: '2025-06-01', dayTrips: [] },
-  { name: 'Rome', country: 'IT', arrival: '2025-06-01', departure: '2025-06-03', dayTrips: [] },
-  { name: 'Amalfi', country: 'IT', arrival: '2025-06-03', departure: '2025-06-05', dayTrips: [] },
-  { name: 'Nice', country: 'FR', arrival: '2025-06-05', departure: '2025-06-09', dayTrips: ['Eze', 'Monaco'] },
-  { name: 'Lyon', country: 'FR', arrival: '2025-06-09', departure: '2025-06-12', dayTrips: ['Geneva'] },
-  { name: 'Paris', country: 'FR', arrival: '2025-06-12', departure: '2025-06-17', dayTrips: [] },
-  { name: 'Brussels', country: 'BE', arrival: '2025-06-17', departure: '2025-06-20', dayTrips: ['Antwerp'] },
-  { name: 'Amsterdam', country: 'NL', arrival: '2025-06-20', departure: '2025-06-25', dayTrips: ['Rotterdam'] },
-  { name: 'Berlin', country: 'DE', arrival: '2025-06-25', departure: '2025-06-30', dayTrips: ['Hamburg'] },
-  { name: 'Munich', country: 'DE', arrival: '2025-06-30', departure: '2025-07-06', dayTrips: [] },
+  { name: 'Venice', country: 'IT', arrival: '2026-05-27', departure: '2026-05-29', dayTrips: [] },
+  { name: 'Florence', country: 'IT', arrival: '2026-05-29', departure: '2026-06-01', dayTrips: [] },
+  { name: 'Rome', country: 'IT', arrival: '2026-06-01', departure: '2026-06-03', dayTrips: [] },
+  { name: 'Amalfi', country: 'IT', arrival: '2026-06-03', departure: '2026-06-05', dayTrips: [] },
+  { name: 'Nice', country: 'FR', arrival: '2026-06-05', departure: '2026-06-09', dayTrips: ['Eze', 'Monaco'] },
+  { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Geneva'] },
+  { name: 'Paris', country: 'FR', arrival: '2026-06-12', departure: '2026-06-17', dayTrips: [] },
+  { name: 'Brussels', country: 'BE', arrival: '2026-06-17', departure: '2026-06-20', dayTrips: ['Antwerp'] },
+  { name: 'Amsterdam', country: 'NL', arrival: '2026-06-20', departure: '2026-06-25', dayTrips: ['Rotterdam'] },
+  { name: 'Berlin', country: 'DE', arrival: '2026-06-25', departure: '2026-06-30', dayTrips: ['Hamburg'] },
+  { name: 'Munich', country: 'DE', arrival: '2026-06-30', departure: '2026-07-06', dayTrips: [] },
 ]
 
 export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Geneva', 'Antwerp', 'Rotterdam', 'Hamburg']
