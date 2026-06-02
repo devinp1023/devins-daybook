@@ -335,7 +335,7 @@ export default function NewEntry() {
         }
 
         updateEntry(editId, { city: resolvedCity, country, date, title: title.trim(), sections: sectionData })
-        navigate(`/entry/${editId}`)
+        navigate(-1)
       } else {
         const entry = createEntry({ city: resolvedCity, country, date, title: title.trim(), sections: {} })
         const sectionData = {}
