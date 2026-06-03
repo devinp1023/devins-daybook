@@ -228,6 +228,89 @@ export const LANDMARKS = {
     { type: 'path', d: 'M140 148 Q165 140 200 138 Q235 140 260 148 Q230 146 200 147 Q170 146 140 148', stroke: true, fill: 0.06, width: 1, opacity: 0.15 },
   ],
 
+  Annecy: [
+    // Alpine peaks (far back)
+    { type: 'path', d: 'M40 130 L120 50 L160 90 L220 30 L290 80 L360 130 Z', fill: true, opacity: 0.1 },
+    { type: 'path', d: 'M60 130 L130 70 L180 105 L220 60 L280 100 L350 130', stroke: true, width: 1.5, opacity: 0.2 },
+    // Snow caps
+    { type: 'path', d: 'M115 55 L120 50 L128 62 Z', fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M215 35 L222 30 L230 44 Z', fill: true, opacity: 0.22 },
+    // Palais de l'Isle — turreted castle on the water
+    { type: 'rect', x: 180, y: 95, w: 42, h: 30, fill: true, opacity: 0.16 },
+    { type: 'path', d: 'M178 95 L195 78 L212 95 Z', fill: true, opacity: 0.22 },
+    { type: 'rect', x: 202, y: 70, w: 14, h: 25, fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M200 70 L209 60 L218 70 Z', fill: true, opacity: 0.26 },
+    { type: 'line', x1: 209, y1: 60, x2: 209, y2: 52, opacity: 0.3, width: 1 },
+    // Tiny windows
+    { type: 'rect', x: 188, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
+    { type: 'rect', x: 200, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
+    { type: 'rect', x: 212, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
+    // Lake water
+    { type: 'path', d: 'M40 132 Q120 128 200 131 Q280 134 360 129', stroke: true, width: 1.5, opacity: 0.22 },
+    { type: 'path', d: 'M40 142 Q120 138 200 141 Q280 144 360 138', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M40 150 Q120 146 200 149 Q280 152 360 147', stroke: true, width: 1, opacity: 0.1 },
+  ],
+
+  Spreewald: [
+    // Tall conifer trees — trunks
+    { type: 'line', x1: 80, y1: 130, x2: 80, y2: 28, opacity: 0.25, width: 2 },
+    { type: 'line', x1: 130, y1: 130, x2: 130, y2: 18, opacity: 0.22, width: 2 },
+    { type: 'line', x1: 280, y1: 130, x2: 280, y2: 32, opacity: 0.2, width: 2 },
+    { type: 'line', x1: 330, y1: 130, x2: 330, y2: 22, opacity: 0.22, width: 2 },
+    // Conifer foliage triangles
+    { type: 'path', d: 'M70 45 L80 25 L90 45 Z', fill: true, opacity: 0.18 },
+    { type: 'path', d: 'M72 62 L80 42 L88 62 Z', fill: true, opacity: 0.2 },
+    { type: 'path', d: 'M70 80 L80 58 L90 80 Z', fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M118 32 L130 10 L142 32 Z', fill: true, opacity: 0.18 },
+    { type: 'path', d: 'M120 52 L130 28 L140 52 Z', fill: true, opacity: 0.2 },
+    { type: 'path', d: 'M118 72 L130 48 L142 72 Z', fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M270 48 L280 28 L290 48 Z', fill: true, opacity: 0.18 },
+    { type: 'path', d: 'M272 66 L280 44 L288 66 Z', fill: true, opacity: 0.2 },
+    { type: 'path', d: 'M270 84 L280 60 L290 84 Z', fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M320 40 L330 18 L340 40 Z', fill: true, opacity: 0.18 },
+    { type: 'path', d: 'M322 58 L330 36 L338 58 Z', fill: true, opacity: 0.2 },
+    { type: 'path', d: 'M320 76 L330 52 L340 76 Z', fill: true, opacity: 0.22 },
+    // Distant tree (back middle)
+    { type: 'line', x1: 200, y1: 130, x2: 200, y2: 65, opacity: 0.1, width: 1 },
+    { type: 'path', d: 'M194 75 L200 60 L206 75 Z', fill: true, opacity: 0.08 },
+    { type: 'path', d: 'M193 88 L200 72 L207 88 Z', fill: true, opacity: 0.1 },
+    // Flat-bottomed punt boat (Kahn) on the canal
+    { type: 'path', d: 'M150 120 Q200 114 268 120 L258 130 L160 130 Z', stroke: true, fill: 0.12, width: 1.5, opacity: 0.25 },
+    // Punter's pole
+    { type: 'line', x1: 250, y1: 120, x2: 272, y2: 86, opacity: 0.25, width: 1 },
+    // Water ripples
+    { type: 'path', d: 'M40 138 Q120 134 200 137 Q280 140 360 135', stroke: true, width: 1, opacity: 0.18 },
+    { type: 'path', d: 'M40 148 Q120 144 200 147 Q280 150 360 145', stroke: true, width: 1, opacity: 0.12 },
+  ],
+
+  Stuttgart: [
+    // Mercedes three-point star — ring + 3 spokes from center at 0°, 120°, 240°
+    { type: 'circle', cx: 318, cy: 58, r: 28, stroke: true, fill: 0.04, opacity: 0.22, strokeWidth: 1.5 },
+    { type: 'circle', cx: 318, cy: 58, r: 22, stroke: true, opacity: 0.15, strokeWidth: 1 },
+    // Up spoke
+    { type: 'line', x1: 318, y1: 58, x2: 318, y2: 32, opacity: 0.32, width: 2.5 },
+    // Bottom-left spoke (120° from up)
+    { type: 'line', x1: 318, y1: 58, x2: 295, y2: 71, opacity: 0.32, width: 2.5 },
+    // Bottom-right spoke (240° from up)
+    { type: 'line', x1: 318, y1: 58, x2: 341, y2: 71, opacity: 0.32, width: 2.5 },
+    // Classic car silhouette — rounded vintage profile
+    { type: 'path', d: 'M55 118 L70 105 Q82 92 105 90 L130 88 L165 88 L182 96 Q195 102 210 108 L215 118 Z', stroke: true, fill: 0.1, width: 1.5, opacity: 0.26 },
+    // Cabin window (lighter)
+    { type: 'path', d: 'M108 92 Q120 88 145 88 L160 88 L173 96 Z', fill: true, opacity: 0.08 },
+    // Door line
+    { type: 'line', x1: 135, y1: 92, x2: 135, y2: 116, opacity: 0.16, width: 1 },
+    // Front headlight hint
+    { type: 'circle', cx: 65, cy: 108, r: 3, fill: true, opacity: 0.25 },
+    // Wheels
+    { type: 'circle', cx: 85, cy: 122, r: 10, stroke: true, fill: 0.18, opacity: 0.32, strokeWidth: 1.5 },
+    { type: 'circle', cx: 85, cy: 122, r: 3, fill: true, opacity: 0.35 },
+    { type: 'circle', cx: 180, cy: 122, r: 10, stroke: true, fill: 0.18, opacity: 0.32, strokeWidth: 1.5 },
+    { type: 'circle', cx: 180, cy: 122, r: 3, fill: true, opacity: 0.35 },
+    // Ground line
+    { type: 'path', d: 'M40 142 Q120 138 200 140 Q280 142 360 138', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M40 150 Q120 146 200 148 Q280 150 360 146', stroke: true, width: 1, opacity: 0.1 },
+  ],
+
   _fallback: [
     { type: 'circle', cx: 200, cy: 70, r: 25, stroke: true, fill: 0.05, opacity: 0.2, strokeWidth: 1.5 },
     { type: 'path', d: 'M200 95 L200 130', stroke: true, width: 1.5, opacity: 0.15 },
