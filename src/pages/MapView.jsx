@@ -11,7 +11,7 @@ const MAP_POSITIONS = {
   Venice:    { x: 245, y: 185 },
   Florence:  { x: 215, y: 228 },
   Rome:      { x: 205, y: 290 },
-  Amalfi:    { x: 235, y: 340 },
+  Positano:  { x: 235, y: 340 },
   Nice:      { x: 135, y: 250 },
   Lyon:      { x: 95, y: 200 },
   Paris:     { x: 70, y: 132 },
@@ -22,10 +22,11 @@ const MAP_POSITIONS = {
   // Day trips near their parent
   Eze:       { x: 155, y: 265 },
   Monaco:    { x: 160, y: 280 },
-  Geneva:    { x: 108, y: 228 },
+  Annecy:    { x: 112, y: 215 },
   Antwerp:   { x: 103, y: 60 },
   Rotterdam: { x: 112, y: 44 },
-  Hamburg:   { x: 285, y: 18 },
+  Spreewald: { x: 280, y: 60 },
+  Stuttgart: { x: 220, y: 100 },
 }
 
 const VB_W = 320
@@ -36,7 +37,7 @@ const LABEL_CONFIG = {
   Venice:    { anchor: 'start',  dx: 14, dy: 4 },
   Florence:  { anchor: 'start',  dx: 14, dy: 4 },
   Rome:      { anchor: 'end',    dx: -14, dy: 4 },
-  Amalfi:    { anchor: 'start',  dx: 14, dy: 4 },
+  Positano:  { anchor: 'start',  dx: 14, dy: 4 },
   Nice:      { anchor: 'end',    dx: -14, dy: 4 },
   Lyon:      { anchor: 'end',    dx: -14, dy: 4 },
   Paris:     { anchor: 'end',    dx: -14, dy: 4 },

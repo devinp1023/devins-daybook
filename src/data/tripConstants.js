@@ -6,17 +6,17 @@ export const CITIES = [
   { name: 'Venice', country: 'IT', arrival: '2026-05-27', departure: '2026-05-29', dayTrips: [] },
   { name: 'Florence', country: 'IT', arrival: '2026-05-29', departure: '2026-06-01', dayTrips: [] },
   { name: 'Rome', country: 'IT', arrival: '2026-06-01', departure: '2026-06-03', dayTrips: [] },
-  { name: 'Amalfi', country: 'IT', arrival: '2026-06-03', departure: '2026-06-05', dayTrips: [] },
+  { name: 'Positano', country: 'IT', arrival: '2026-06-03', departure: '2026-06-05', dayTrips: [] },
   { name: 'Nice', country: 'FR', arrival: '2026-06-05', departure: '2026-06-09', dayTrips: ['Eze', 'Monaco'] },
-  { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Geneva'] },
+  { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Annecy'] },
   { name: 'Paris', country: 'FR', arrival: '2026-06-12', departure: '2026-06-17', dayTrips: [] },
   { name: 'Brussels', country: 'BE', arrival: '2026-06-17', departure: '2026-06-20', dayTrips: ['Antwerp'] },
   { name: 'Amsterdam', country: 'NL', arrival: '2026-06-20', departure: '2026-06-25', dayTrips: ['Rotterdam'] },
-  { name: 'Berlin', country: 'DE', arrival: '2026-06-25', departure: '2026-06-30', dayTrips: ['Hamburg'] },
-  { name: 'Munich', country: 'DE', arrival: '2026-06-30', departure: '2026-07-06', dayTrips: [] },
+  { name: 'Berlin', country: 'DE', arrival: '2026-06-25', departure: '2026-06-30', dayTrips: ['Spreewald'] },
+  { name: 'Munich', country: 'DE', arrival: '2026-06-30', departure: '2026-07-06', dayTrips: ['Stuttgart'] },
 ]
 
-export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Geneva', 'Antwerp', 'Rotterdam', 'Hamburg']
+export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Annecy', 'Antwerp', 'Rotterdam', 'Spreewald', 'Stuttgart']
 
 export const COUNTRY_NAMES = {
   IT: 'Italy',
@@ -54,7 +54,7 @@ export const CITY_COORDINATES = {
   Venice: { x: 330, y: 295 },
   Florence: { x: 310, y: 310 },
   Rome: { x: 320, y: 350 },
-  Amalfi: { x: 335, y: 370 },
+  Positano: { x: 335, y: 370 },
   Nice: { x: 270, y: 310 },
   Lyon: { x: 250, y: 285 },
   Paris: { x: 230, y: 235 },
@@ -64,8 +64,9 @@ export const CITY_COORDINATES = {
   Munich: { x: 320, y: 230 },
   Eze: { x: 275, y: 315 },
   Monaco: { x: 278, y: 318 },
-  Geneva: { x: 260, y: 275 },
+  Annecy: { x: 263, y: 280 },
   Antwerp: { x: 255, y: 195 },
   Rotterdam: { x: 255, y: 185 },
-  Hamburg: { x: 320, y: 155 },
+  Spreewald: { x: 350, y: 190 },
+  Stuttgart: { x: 305, y: 215 },
 }

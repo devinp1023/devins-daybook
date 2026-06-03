@@ -46,7 +46,7 @@ export const LANDMARKS = {
     { type: 'path', d: 'M226 118 Q236 106 246 118', stroke: true, width: 1.5, opacity: 0.2 },
   ],
 
-  Amalfi: [
+  Positano: [
     { type: 'rect', x: 120, y: 60, w: 25, h: 70, fill: true, opacity: 0.15 },
     { type: 'rect', x: 150, y: 75, w: 20, h: 55, fill: true, opacity: 0.12 },
     { type: 'rect', x: 175, y: 50, w: 22, h: 80, fill: true, opacity: 0.18 },
