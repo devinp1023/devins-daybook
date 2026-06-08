@@ -228,27 +228,40 @@ export const LANDMARKS = {
     { type: 'path', d: 'M140 148 Q165 140 200 138 Q235 140 260 148 Q230 146 200 147 Q170 146 140 148', stroke: true, fill: 0.06, width: 1, opacity: 0.15 },
   ],
 
-  Annecy: [
-    // Alpine peaks (far back)
-    { type: 'path', d: 'M40 130 L120 50 L160 90 L220 30 L290 80 L360 130 Z', fill: true, opacity: 0.1 },
-    { type: 'path', d: 'M60 130 L130 70 L180 105 L220 60 L280 100 L350 130', stroke: true, width: 1.5, opacity: 0.2 },
-    // Snow caps
-    { type: 'path', d: 'M115 55 L120 50 L128 62 Z', fill: true, opacity: 0.22 },
-    { type: 'path', d: 'M215 35 L222 30 L230 44 Z', fill: true, opacity: 0.22 },
-    // Palais de l'Isle — turreted castle on the water
-    { type: 'rect', x: 180, y: 95, w: 42, h: 30, fill: true, opacity: 0.16 },
-    { type: 'path', d: 'M178 95 L195 78 L212 95 Z', fill: true, opacity: 0.22 },
-    { type: 'rect', x: 202, y: 70, w: 14, h: 25, fill: true, opacity: 0.22 },
-    { type: 'path', d: 'M200 70 L209 60 L218 70 Z', fill: true, opacity: 0.26 },
-    { type: 'line', x1: 209, y1: 60, x2: 209, y2: 52, opacity: 0.3, width: 1 },
-    // Tiny windows
-    { type: 'rect', x: 188, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
-    { type: 'rect', x: 200, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
-    { type: 'rect', x: 212, y: 105, w: 4, h: 6, fill: true, opacity: 0.3 },
-    // Lake water
-    { type: 'path', d: 'M40 132 Q120 128 200 131 Q280 134 360 129', stroke: true, width: 1.5, opacity: 0.22 },
-    { type: 'path', d: 'M40 142 Q120 138 200 141 Q280 144 360 138', stroke: true, width: 1, opacity: 0.14 },
-    { type: 'path', d: 'M40 150 Q120 146 200 149 Q280 152 360 147', stroke: true, width: 1, opacity: 0.1 },
+  Vienne: [
+    // Temple of Augustus and Livia — Roman temple with columns
+    // Stepped podium
+    { type: 'rect', x: 140, y: 122, w: 130, h: 6, fill: true, opacity: 0.2 },
+    { type: 'rect', x: 145, y: 116, w: 120, h: 6, fill: true, opacity: 0.18 },
+    // Six Corinthian columns
+    { type: 'rect', x: 152, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    { type: 'rect', x: 173, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    { type: 'rect', x: 194, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    { type: 'rect', x: 215, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    { type: 'rect', x: 236, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    { type: 'rect', x: 251, y: 70, w: 7, h: 46, fill: true, opacity: 0.22 },
+    // Column capitals
+    { type: 'rect', x: 150, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    { type: 'rect', x: 171, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    { type: 'rect', x: 192, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    { type: 'rect', x: 213, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    { type: 'rect', x: 234, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    { type: 'rect', x: 249, y: 66, w: 11, h: 4, fill: true, opacity: 0.25 },
+    // Entablature
+    { type: 'rect', x: 144, y: 58, w: 122, h: 8, fill: true, opacity: 0.2 },
+    // Triangular pediment
+    { type: 'path', d: 'M140 58 L205 30 L270 58 Z', fill: true, opacity: 0.24 },
+    { type: 'path', d: 'M140 58 L205 30 L270 58', stroke: true, width: 1.5, opacity: 0.3 },
+    // Roman theater (amphitheater) curve in the background, behind temple right
+    { type: 'path', d: 'M285 125 Q300 95 335 90 Q360 92 365 125', stroke: true, fill: 0.06, width: 1.5, opacity: 0.18 },
+    { type: 'path', d: 'M295 125 Q310 105 335 100 Q355 102 358 125', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M305 125 Q318 113 335 110 Q350 112 352 125', stroke: true, width: 1, opacity: 0.12 },
+    // Cypress tree on the left
+    { type: 'path', d: 'M70 125 Q60 90 70 50 Q80 90 70 125 Z', fill: true, opacity: 0.18 },
+    { type: 'line', x1: 70, y1: 125, x2: 70, y2: 130, opacity: 0.25, width: 1.5 },
+    // Rhône river / ground line
+    { type: 'path', d: 'M40 145 Q120 140 200 143 Q280 146 360 140', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M40 152 Q120 148 200 150 Q280 153 360 148', stroke: true, width: 1, opacity: 0.1 },
   ],
 
   Spreewald: [

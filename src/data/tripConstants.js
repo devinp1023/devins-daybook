@@ -8,7 +8,7 @@ export const CITIES = [
   { name: 'Rome', country: 'IT', arrival: '2026-06-01', departure: '2026-06-03', dayTrips: [] },
   { name: 'Positano', country: 'IT', arrival: '2026-06-03', departure: '2026-06-05', dayTrips: [] },
   { name: 'Nice', country: 'FR', arrival: '2026-06-05', departure: '2026-06-09', dayTrips: ['Eze', 'Monaco'] },
-  { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Annecy'] },
+  { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Vienne'] },
   { name: 'Paris', country: 'FR', arrival: '2026-06-12', departure: '2026-06-17', dayTrips: [] },
   { name: 'Brussels', country: 'BE', arrival: '2026-06-17', departure: '2026-06-20', dayTrips: ['Antwerp'] },
   { name: 'Amsterdam', country: 'NL', arrival: '2026-06-20', departure: '2026-06-25', dayTrips: ['Rotterdam'] },
@@ -16,7 +16,7 @@ export const CITIES = [
   { name: 'Munich', country: 'DE', arrival: '2026-06-30', departure: '2026-07-06', dayTrips: ['Stuttgart'] },
 ]
 
-export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Annecy', 'Antwerp', 'Rotterdam', 'Spreewald', 'Stuttgart']
+export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Vienne', 'Antwerp', 'Rotterdam', 'Spreewald', 'Stuttgart']
 
 export const COUNTRY_NAMES = {
   IT: 'Italy',
@@ -64,7 +64,7 @@ export const CITY_COORDINATES = {
   Munich: { x: 320, y: 230 },
   Eze: { x: 275, y: 315 },
   Monaco: { x: 278, y: 318 },
-  Annecy: { x: 263, y: 280 },
+  Vienne: { x: 263, y: 280 },
   Antwerp: { x: 255, y: 195 },
   Rotterdam: { x: 255, y: 185 },
   Spreewald: { x: 350, y: 190 },

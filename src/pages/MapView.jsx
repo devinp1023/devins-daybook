@@ -22,7 +22,7 @@ const MAP_POSITIONS = {
   // Day trips near their parent
   Eze:       { x: 155, y: 265 },
   Monaco:    { x: 160, y: 280 },
-  Annecy:    { x: 112, y: 215 },
+  Vienne:    { x: 97, y: 212 },
   Antwerp:   { x: 103, y: 60 },
   Rotterdam: { x: 112, y: 44 },
   Spreewald: { x: 280, y: 60 },

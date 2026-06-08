@@ -562,7 +562,7 @@ function drawFlag(ctx, city, x, y, w, h) {
   // Map cities to countries
   const cityCountry = {
     Venice: 'IT', Florence: 'IT', Rome: 'IT', Positano: 'IT',
-    Nice: 'FR', Lyon: 'FR', Paris: 'FR', Annecy: 'FR', Eze: 'FR',
+    Nice: 'FR', Lyon: 'FR', Paris: 'FR', Vienne: 'FR', Eze: 'FR',
     Monaco: 'MC',
     Brussels: 'BE', Antwerp: 'BE',
     Amsterdam: 'NL', Rotterdam: 'NL',
