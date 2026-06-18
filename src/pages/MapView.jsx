@@ -23,7 +23,7 @@ const MAP_POSITIONS = {
   Eze:       { x: 155, y: 265 },
   Monaco:    { x: 160, y: 280 },
   Vienne:    { x: 97, y: 212 },
-  Antwerp:   { x: 103, y: 60 },
+  Ghent:     { x: 108, y: 72 },
   Rotterdam: { x: 112, y: 44 },
   Spreewald: { x: 280, y: 60 },
   Stuttgart: { x: 220, y: 100 },

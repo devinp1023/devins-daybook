@@ -177,18 +177,47 @@ export const LANDMARKS = {
     { type: 'path', d: 'M60 120 Q100 90 140 115 Q180 85 220 110 Q260 80 300 108 Q330 90 360 120', stroke: true, width: 1.5, opacity: 0.1 },
   ],
 
-  Antwerp: [
-    { type: 'rect', x: 188, y: 50, w: 24, h: 80, fill: true, opacity: 0.15 },
-    { type: 'path', d: 'M185 50 L200 10 L215 50', fill: true, opacity: 0.2 },
-    { type: 'line', x1: 200, y1: 10, x2: 200, y2: 2, opacity: 0.3, width: 1.5 },
-    { type: 'path', d: 'M193 65 Q200 58 207 65', stroke: true, width: 1, opacity: 0.25 },
-    { type: 'path', d: 'M193 85 Q200 78 207 85', stroke: true, width: 1, opacity: 0.25 },
-    { type: 'path', d: 'M310 70 L325 55 L340 70 L325 85 Z', stroke: true, fill: 0.08, width: 1.5, opacity: 0.25 },
-    { type: 'path', d: 'M316 70 L325 61 L334 70', stroke: true, width: 1, opacity: 0.15 },
-    { type: 'rect', x: 120, y: 80, w: 28, h: 50, fill: true, opacity: 0.1 },
-    { type: 'path', d: 'M118 80 L134 65 L150 80', fill: true, opacity: 0.12 },
-    { type: 'rect', x: 250, y: 85, w: 25, h: 45, fill: true, opacity: 0.1 },
-    { type: 'path', d: 'M248 85 L262 72 L277 85', fill: true, opacity: 0.12 },
+  Ghent: [
+    // Three medieval towers along the Graslei skyline (Saint Nicholas Church, Belfry, Saint Bavo Cathedral)
+    // Left tower — Saint Nicholas Church (Romanesque, broad)
+    { type: 'rect', x: 100, y: 55, w: 32, h: 75, fill: true, opacity: 0.16 },
+    { type: 'path', d: 'M98 55 L116 35 L134 55 Z', fill: true, opacity: 0.2 },
+    { type: 'rect', x: 113, y: 25, w: 6, h: 12, fill: true, opacity: 0.22 },
+    { type: 'path', d: 'M111 25 L116 16 L121 25 Z', fill: true, opacity: 0.25 },
+    { type: 'line', x1: 116, y1: 16, x2: 116, y2: 10, opacity: 0.3, width: 1 },
+    // Arched window
+    { type: 'path', d: 'M110 75 Q116 68 122 75 L122 90 L110 90 Z', stroke: true, fill: 0.06, width: 1, opacity: 0.22 },
+    // Center tower — Belfry (tallest, square with crown)
+    { type: 'rect', x: 178, y: 30, w: 28, h: 100, fill: true, opacity: 0.2 },
+    { type: 'rect', x: 175, y: 28, w: 34, h: 5, fill: true, opacity: 0.22 },
+    // Belfry crown spire
+    { type: 'path', d: 'M178 30 L192 5 L206 30 Z', fill: true, opacity: 0.26 },
+    { type: 'line', x1: 192, y1: 5, x2: 192, y2: -3, opacity: 0.35, width: 1.5 },
+    // Dragon weathervane hint
+    { type: 'path', d: 'M188 -2 L196 -2 M192 -2 L192 -6', stroke: true, width: 1, opacity: 0.3 },
+    // Belfry windows
+    { type: 'rect', x: 184, y: 50, w: 6, h: 14, fill: true, opacity: 0.3 },
+    { type: 'rect', x: 194, y: 50, w: 6, h: 14, fill: true, opacity: 0.3 },
+    { type: 'rect', x: 184, y: 75, w: 6, h: 14, fill: true, opacity: 0.28 },
+    { type: 'rect', x: 194, y: 75, w: 6, h: 14, fill: true, opacity: 0.28 },
+    // Right tower — Saint Bavo Cathedral (Gothic, tall slim)
+    { type: 'rect', x: 252, y: 45, w: 30, h: 85, fill: true, opacity: 0.18 },
+    { type: 'path', d: 'M250 45 L267 22 L284 45 Z', fill: true, opacity: 0.22 },
+    { type: 'line', x1: 267, y1: 22, x2: 267, y2: 14, opacity: 0.32, width: 1 },
+    // Gothic pointed arch window
+    { type: 'path', d: 'M260 70 Q267 60 274 70 L274 90 L260 90 Z', stroke: true, fill: 0.06, width: 1, opacity: 0.22 },
+    // Stepped-gable Graslei houses in foreground (right of center)
+    { type: 'rect', x: 305, y: 95, w: 18, h: 35, fill: true, opacity: 0.14 },
+    { type: 'path', d: 'M305 95 L305 88 L309 88 L309 92 L314 92 L314 88 L319 88 L319 92 L323 92 L323 95', stroke: true, fill: 0.1, width: 1, opacity: 0.2 },
+    { type: 'rect', x: 328, y: 100, w: 16, h: 30, fill: true, opacity: 0.14 },
+    { type: 'path', d: 'M328 100 L328 94 L332 94 L332 97 L336 97 L336 94 L340 94 L340 97 L344 97 L344 100', stroke: true, fill: 0.1, width: 1, opacity: 0.2 },
+    // Stepped-gable house on left foreground
+    { type: 'rect', x: 56, y: 100, w: 16, h: 30, fill: true, opacity: 0.14 },
+    { type: 'path', d: 'M56 100 L56 94 L60 94 L60 97 L64 97 L64 94 L68 94 L68 97 L72 97 L72 100', stroke: true, fill: 0.1, width: 1, opacity: 0.2 },
+    // River Leie at the bottom — reflections
+    { type: 'path', d: 'M40 138 Q120 134 200 137 Q280 140 360 135', stroke: true, width: 1.5, opacity: 0.2 },
+    { type: 'path', d: 'M40 146 Q120 142 200 145 Q280 148 360 143', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M40 153 Q120 150 200 152 Q280 154 360 149', stroke: true, width: 1, opacity: 0.1 },
   ],
 
   Rotterdam: [
