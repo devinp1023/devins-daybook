@@ -25,6 +25,7 @@ const MAP_POSITIONS = {
   Vienne:    { x: 97, y: 212 },
   Ghent:     { x: 108, y: 72 },
   Rotterdam: { x: 112, y: 44 },
+  'Zaanse Schans': { x: 128, y: 22 },
   Spreewald: { x: 280, y: 60 },
   Stuttgart: { x: 220, y: 100 },
 }

@@ -565,7 +565,7 @@ function drawFlag(ctx, city, x, y, w, h) {
     Nice: 'FR', Lyon: 'FR', Paris: 'FR', Vienne: 'FR', Eze: 'FR',
     Monaco: 'MC',
     Brussels: 'BE', Ghent: 'BE',
-    Amsterdam: 'NL', Rotterdam: 'NL',
+    Amsterdam: 'NL', Rotterdam: 'NL', 'Zaanse Schans': 'NL',
     Berlin: 'DE', Munich: 'DE', Spreewald: 'DE', Stuttgart: 'DE',
     Chicago: 'US',
   }

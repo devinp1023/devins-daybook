@@ -353,6 +353,65 @@ export const LANDMARKS = {
     { type: 'path', d: 'M40 150 Q120 146 200 148 Q280 150 360 146', stroke: true, width: 1, opacity: 0.1 },
   ],
 
+  'Zaanse Schans': [
+    // Main windmill (left, larger) — tapered octagonal base
+    { type: 'path', d: 'M70 130 L130 130 L120 55 L80 55 Z', fill: true, opacity: 0.18 },
+    // Stripes (plank texture)
+    { type: 'line', x1: 78, y1: 80, x2: 122, y2: 80, opacity: 0.12, width: 0.8 },
+    { type: 'line', x1: 76, y1: 100, x2: 124, y2: 100, opacity: 0.12, width: 0.8 },
+    { type: 'line', x1: 74, y1: 120, x2: 126, y2: 120, opacity: 0.12, width: 0.8 },
+    // Small door at base
+    { type: 'rect', x: 96, y: 110, w: 8, h: 20, fill: true, opacity: 0.28 },
+    // Windmill cap (dome)
+    { type: 'path', d: 'M78 55 Q100 38 122 55 Z', fill: true, opacity: 0.24 },
+    // Hub of sails
+    { type: 'circle', cx: 100, cy: 50, r: 3, fill: true, opacity: 0.35 },
+    // 4 sails — crossed X
+    { type: 'line', x1: 100, y1: 50, x2: 58, y2: 8, opacity: 0.32, width: 2.5 },
+    { type: 'line', x1: 100, y1: 50, x2: 142, y2: 92, opacity: 0.32, width: 2.5 },
+    { type: 'line', x1: 100, y1: 50, x2: 142, y2: 8, opacity: 0.32, width: 2.5 },
+    { type: 'line', x1: 100, y1: 50, x2: 58, y2: 92, opacity: 0.32, width: 2.5 },
+    // Sail blade slats (cross-bars)
+    { type: 'line', x1: 70, y1: 16, x2: 80, y2: 30, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 76, y1: 6, x2: 86, y2: 20, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 130, y1: 84, x2: 120, y2: 70, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 124, y1: 94, x2: 114, y2: 80, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 132, y1: 18, x2: 122, y2: 30, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 126, y1: 8, x2: 114, y2: 22, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 70, y1: 86, x2: 80, y2: 70, opacity: 0.22, width: 1 },
+    { type: 'line', x1: 76, y1: 94, x2: 86, y2: 80, opacity: 0.22, width: 1 },
+
+    // Second windmill (right, smaller, further back)
+    { type: 'path', d: 'M285 130 L335 130 L327 75 L293 75 Z', fill: true, opacity: 0.14 },
+    { type: 'line', x1: 290, y1: 100, x2: 330, y2: 100, opacity: 0.1, width: 0.7 },
+    { type: 'line', x1: 288, y1: 118, x2: 332, y2: 118, opacity: 0.1, width: 0.7 },
+    { type: 'path', d: 'M291 75 Q310 62 329 75 Z', fill: true, opacity: 0.18 },
+    { type: 'circle', cx: 310, cy: 72, r: 2, fill: true, opacity: 0.3 },
+    { type: 'line', x1: 310, y1: 72, x2: 280, y2: 42, opacity: 0.26, width: 2 },
+    { type: 'line', x1: 310, y1: 72, x2: 340, y2: 102, opacity: 0.26, width: 2 },
+    { type: 'line', x1: 310, y1: 72, x2: 340, y2: 42, opacity: 0.26, width: 2 },
+    { type: 'line', x1: 310, y1: 72, x2: 280, y2: 102, opacity: 0.26, width: 2 },
+
+    // Traditional green wooden plank house in foreground center
+    { type: 'rect', x: 190, y: 95, w: 60, h: 35, fill: true, opacity: 0.18 },
+    // Steep gabled roof
+    { type: 'path', d: 'M186 95 L220 70 L254 95 Z', fill: true, opacity: 0.24 },
+    // Plank lines
+    { type: 'line', x1: 192, y1: 105, x2: 248, y2: 105, opacity: 0.12, width: 0.6 },
+    { type: 'line', x1: 192, y1: 115, x2: 248, y2: 115, opacity: 0.12, width: 0.6 },
+    { type: 'line', x1: 192, y1: 125, x2: 248, y2: 125, opacity: 0.12, width: 0.6 },
+    // Windows
+    { type: 'rect', x: 200, y: 102, w: 10, h: 12, fill: true, opacity: 0.3 },
+    { type: 'rect', x: 230, y: 102, w: 10, h: 12, fill: true, opacity: 0.3 },
+    // Door
+    { type: 'rect', x: 216, y: 110, w: 8, h: 20, fill: true, opacity: 0.32 },
+
+    // Zaan river at the bottom
+    { type: 'path', d: 'M30 138 Q120 134 200 137 Q280 140 370 135', stroke: true, width: 1.5, opacity: 0.22 },
+    { type: 'path', d: 'M30 146 Q120 142 200 145 Q280 148 370 143', stroke: true, width: 1, opacity: 0.14 },
+    { type: 'path', d: 'M30 153 Q120 150 200 152 Q280 154 370 149', stroke: true, width: 1, opacity: 0.1 },
+  ],
+
   _fallback: [
     { type: 'circle', cx: 200, cy: 70, r: 25, stroke: true, fill: 0.05, opacity: 0.2, strokeWidth: 1.5 },
     { type: 'path', d: 'M200 95 L200 130', stroke: true, width: 1.5, opacity: 0.15 },

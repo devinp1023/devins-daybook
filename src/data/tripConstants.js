@@ -11,12 +11,12 @@ export const CITIES = [
   { name: 'Lyon', country: 'FR', arrival: '2026-06-09', departure: '2026-06-12', dayTrips: ['Vienne'] },
   { name: 'Paris', country: 'FR', arrival: '2026-06-12', departure: '2026-06-17', dayTrips: [] },
   { name: 'Brussels', country: 'BE', arrival: '2026-06-17', departure: '2026-06-20', dayTrips: ['Ghent'] },
-  { name: 'Amsterdam', country: 'NL', arrival: '2026-06-20', departure: '2026-06-25', dayTrips: ['Rotterdam'] },
+  { name: 'Amsterdam', country: 'NL', arrival: '2026-06-20', departure: '2026-06-25', dayTrips: ['Rotterdam', 'Zaanse Schans'] },
   { name: 'Berlin', country: 'DE', arrival: '2026-06-25', departure: '2026-06-30', dayTrips: ['Spreewald'] },
   { name: 'Munich', country: 'DE', arrival: '2026-06-30', departure: '2026-07-06', dayTrips: ['Stuttgart'] },
 ]
 
-export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Vienne', 'Ghent', 'Rotterdam', 'Spreewald', 'Stuttgart']
+export const ALL_DAY_TRIPS = ['Eze', 'Monaco', 'Vienne', 'Ghent', 'Rotterdam', 'Zaanse Schans', 'Spreewald', 'Stuttgart']
 
 export const COUNTRY_NAMES = {
   IT: 'Italy',
@@ -67,6 +67,7 @@ export const CITY_COORDINATES = {
   Vienne: { x: 263, y: 280 },
   Ghent: { x: 248, y: 198 },
   Rotterdam: { x: 255, y: 185 },
+  'Zaanse Schans': { x: 258, y: 174 },
   Spreewald: { x: 350, y: 190 },
   Stuttgart: { x: 305, y: 215 },
 }
